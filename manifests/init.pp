@@ -2,7 +2,7 @@
 class macruby {
   exec { 'Create rbenv plugin directory':
     command => "mkdir -p $HOME/.rbenv/plugins",
-    creates => "~/.rbenv/plugins"
+    creates => "$HOME/.rbenv/plugins"
   }
   exec { 'Add rbenv macruby plugin':
     command => "git clone git://github.com/brettg/rbenv-macruby.git",
