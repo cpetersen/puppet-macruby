@@ -6,7 +6,7 @@ class macruby {
     creates => "/tmp/macruby.zip"
   }
   exec { 'Unzip MacRuby':
-    command => "/usr/bin/unzip -o macruby.zip",
+    command => "/usr/bin/unzip -o /tmp/macruby.zip",
     cwd     => "/tmp",
     creates => "/tmp/MacRuby 0.12/MacRuby 0.12.pkg"
   }
