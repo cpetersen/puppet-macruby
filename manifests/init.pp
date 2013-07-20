@@ -12,7 +12,7 @@ class macruby {
     require => Exec["download"]
   }
   exec { 'install':
-    command => 'sudo /usr/sbin/installer -verbose -pkg /tmp/MacRuby\ 0.12/MacRuby 0.12.pkg -target /',
+    command => 'sudo /usr/sbin/installer -verbose -pkg /tmp/MacRuby\ 0.12/MacRuby\ 0.12.pkg -target /',
     user => 'root',
     require => Exec["extract"]
   }
