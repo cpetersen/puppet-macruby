@@ -1,14 +1,14 @@
 # This is a placeholder class.
 class macruby {
   exec { 'download':
-    command => "curl -L https://github.com/downloads/MacRuby/MacRuby/MacRuby%200.12.zip > macruby.zip",
+    command => "curl -L https://github.com/downloads/MacRuby/MacRuby/MacRuby%200.12.zip -o macruby.zip",
     cwd     => "/tmp",
     creates => "/tmp/macruby.zip"
   }
   exec { 'extract':
     command => "/usr/bin/unzip -o /tmp/macruby.zip",
     cwd     => "/tmp",
-    creates => "/tmp/MacRuby\ 0.12/MacRuby 0.12.pkg",
+    creates => "/tmp/MacRuby\ 0.12/MacRuby\ 0.12.pkg",
     require => Exec["download"]
   }
   exec { 'install':
