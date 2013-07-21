@@ -25,6 +25,7 @@ class macruby {
   }
   exec { 'init':
     command => "rbenv macruby init",
+    creates => '/opt/boxen/rbenv/versions/macruby-0.12/lib'
     require => Exec["plugin"]
   }
 }
