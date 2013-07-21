@@ -8,12 +8,13 @@ class macruby {
   exec { 'extract':
     command => "/usr/bin/unzip -o /tmp/macruby.zip",
     cwd     => "/tmp",
-    creates => "/tmp/MacRuby\ 0.12/MacRuby\ 0.12.pkg",
+    creates => "/tmp/MacRuby\\ 0.12/MacRuby\\ 0.12.pkg",
     require => Exec["download"]
   }
   exec { 'install':
     command => 'sudo /usr/sbin/installer -verbose -pkg /tmp/MacRuby\ 0.12/MacRuby\ 0.12.pkg -target /',
     user => 'root',
+    creates => '/usr/local/bin/macruby'
     require => Exec["extract"]
   }
   exec { 'plugin':
