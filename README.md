@@ -9,6 +9,14 @@ Install [MacRuby](http://macruby.org/), Ruby for the Objective-C Runtime. Curren
 include macruby
 ```
 
+Once installed, you can add
+
+```
+macruby-0.12
+```
+
+to any .ruby-version file to use MacRuby within that directory.
+
 ## Required Puppet Modules
 
 * `boxen`
