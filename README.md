@@ -1,5 +1,4 @@
 # MacRuby Module for Boxen
-[![Build Status](https://travis-ci.org/cpetersen/puppet-macruby.png)](https://travis-ci.org/cpetersen/puppet-macruby)
 
 Install [MacRuby](http://macruby.org/), Ruby for the Objective-C Runtime. Currently at version 0.12.
 
