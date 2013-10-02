@@ -30,3 +30,4 @@ There are 5 steps to the installation.
  * Install - Install the pkg that was included in the zip file
  * Plugin - Add the rbenv macruby plugin (https://github.com/brettg/rbenv-macruby)
  * Init - Init the plugin
+
